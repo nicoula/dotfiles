@@ -21,4 +21,4 @@ $ make
 ```
 ## <a name="what_s_in_it">What's in it?
 * [Zsh](http://zsh.org)
-* [Vim](www.vim.org)
+* [Vim](http://www.vim.org)
