@@ -11,7 +11,6 @@ set number
 set expandtab
 set ignorecase    " ignore case while searching '/'
 set smartcase     " use sensitive case when searching somthing like 'The', at least one cappital letter
-set nowrapscan    " do not wrap around for a search
 
 
 " mapping for the search
