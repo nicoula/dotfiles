@@ -30,6 +30,10 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 #echo "# vim-misc"
 #git clone URL: https://github.com/xolox/vim-misc ~/.vim/bundle/vim-misc
 
+echo "# Update submodule"
+git submodule update --init --recursive
+ln -s $PWD/bundle ~/.vim/bundle
+
 ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
 
 echo
