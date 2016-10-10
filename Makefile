@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 # test git exist
 # test zsh exist
 # git pull .oh-my-zsh
