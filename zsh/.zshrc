@@ -36,7 +36,9 @@ find-grep () {
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="xiong-chiamiov"
+# with git prompt information
+#ZSH_THEME="nico-plus"
+# without git prompt information
 ZSH_THEME="nico"
 
 # Uncomment the following line to use case-sensitive completion.
