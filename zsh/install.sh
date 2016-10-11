@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Zsh"
+echo "=========Zsh========="
 
 # test if zsh is installed
 zsh_exists=`which zsh > /dev/null 2>&1 || echo no`
@@ -17,25 +17,21 @@ do
         if [ -e $file ]; then
                 rm -rf $file
         fi
-        ln -s $PWD/`basename $file` $file
 done
+ln -s $PWD/.zshrc ~/.zshrc
+ln -s $PWD/oh-my-zsh ~/.oh-my-zsh
+
 
 # Make symbolic link for my themes
-nico-theme=oh-my-zsh/themes/nico.zsh-theme
-nico-plus-theme=oh-my-zsh/themes/nico-plus.zsh-theme
-common-aliases=oh-my-zsh/plugins/common-aliases/common-aliases.plugin.zsh
+nico_theme=oh-my-zsh/themes/nico.zsh-theme
+nico_plus_theme=oh-my-zsh/themes/nico-plus.zsh-theme
+common_aliases=oh-my-zsh/plugins/common-aliases/common-aliases.plugin.zsh
 
-for file in $nico-theme $nico-plus-theme $common-aliases
+for file in $nico_theme $nico_plus_theme $common_aliases
 do
-        if [ -e $file ]; then
-                rm -f $file
+        if [ -e $PWD/$file ]; then
+                rm -f $PWD/$file
         fi
-        ln -s $PWD/$file $file
+        cp `basename $file` $file
 done
-
-
-
-
-
-
 
