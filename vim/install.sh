@@ -23,7 +23,7 @@ mkdir -p ~/.vim/autoload
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Install plugins for vim
-echo "# Update submodule"
+echo "# Update submodules for Vim and Zsh"
 git submodule update --init --recursive
 ln -s $PWD/bundle ~/.vim/bundle
 
