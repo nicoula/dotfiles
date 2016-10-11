@@ -10,12 +10,17 @@ if [[ $vim_exists == "no"  ]]; then
         exit 1
 fi
 
+for file in ~/.vimrc ~/.vim
+do
+        if [ -e $file ]; then
+                rm -rf $file
+        fi
+done
+
 # Install the vim configuration file
 echo "# .vimrc"
-if [ -e ~/.vimrc ]; then
-        rm ~/.vimrc
-fi
 ln -s $PWD/.vimrc ~/.vimrc
+
 
 # Install pathogen
 echo "# pathogen"
@@ -25,9 +30,9 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 # Install plugins for vim
 echo "# Update submodules for Vim and Zsh"
 git submodule update --init --recursive
-ln -s $PWD/bundle ~/.vim/bundle
 
-ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
+ln -s $PWD/bundle ~/.vim/bundle
+ln -s $PWD/bundle/vim-colorschemes/colors ~/.vim/colors
 
 echo
 echo

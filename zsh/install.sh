@@ -12,24 +12,26 @@ fi
 
 # Install the zsh configuration file
 echo "# .zshrc"
-if [ -e ~/.zshrc ]; then
-        rm ~/.zshrc
-fi
-ln -s $PWD/.zshrc ~/.zshrc
-ln -s $PWD/oh-my-zsh ~/.oh-my-zsh
+for file in ~/.zshrc ~/.oh-my-zsh
+do
+        if [ -e $file ]; then
+                rm -rf $file
+        fi
+        ln -s $PWD/`basename $file` $file
+done
 
-ln -s $PWD/nico-plus.zsh-theme ~/.oh-my-zsh/themes/nico-plus.zsh-theme
-ln -s $PWD/nico.zsh-theme ~/.oh-my-zsh/themes/nico.zsh-theme
+# Make symbolic link for my themes
+nico-theme=oh-my-zsh/themes/nico.zsh-theme
+nico-plus-theme=oh-my-zsh/themes/nico-plus.zsh-theme
+common-aliases=oh-my-zsh/plugins/common-aliases/common-aliases.plugin.zsh
 
-
-if [ -e ~/.oh-my-zsh/plugins/common-aliases/common-aliases.plugin ]; then
-        rm ~/.oh-my-zsh/plugins/common-aliases/common-aliases.plugin
-fi
-ln -s $PWD/common-aliases.plugin.zsh ~/.oh-my-zsh/plugins/common-aliases/common-aliases.plugin.zsh
-
-
-
-
+for file in $nico-theme $nico-plus-theme $common-aliases
+do
+        if [ -e $file ]; then
+                rm -f $file
+        fi
+        ln -s $PWD/$file $file
+done
 
 
 
