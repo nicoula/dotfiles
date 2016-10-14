@@ -1,17 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export LD_LIBRARY_PATH=/home/mingault/local/bin/lib/zsh/5.2/zsh:$LD_LIBRARY_PATH
-export PATH=/home/mingault/local/bin/bin:/sirius/tools/bin/:$PATH
+export PATH=$HOME/local/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=$HOME/local/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$HOME/local/include:$CPLUS_INCLUDE_PATH
 export EDITOR=/usr/bin/vim
 
-alias UILITE='cd /sirius/work/mingault/sirius_1/sirius/ue/src/ui_lite/src'
 
 alias QWE='source ~/.zshrc'
-alias makec_ram='makec -p taiji_lp1 -t ram -B /sirius/work/mingault/type_ram'
-alias makec_arel='makec -p taiji_lp1 -t arel -B /sirius/work/mingault/taiji_lp1'
-alias multi_ram='multi /sirius/work/mingault/type_ram/obj_taiji_lp1_ram/main.out&'
-alias multi_arel='multi /sirius/work/mingault/taiji_lp1/obj_taiji_lp1_arel/main_dbg.out&'
-alias cp_arel='cp /sirius/work/mingault/taiji_lp1/obj_taiji_lp1_arel/taiji_lp1_TJL1FAmingaX.fhx /dev/usb/lp0'
 
 
 # Path to your oh-my-zsh installation.
@@ -32,6 +28,12 @@ find-grep () {
         fi
  
 }
+
+my_configure () {
+        mkdir -p ~/local/{lib,include}
+        ./configure --prefix=$HOME/local LDFLAG="-L$HOME/local/lib" CFLAGS="-I$HOME/local/include" CPPFLAGS="-I$HOME/local/include"
+}
+
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
