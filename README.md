@@ -8,6 +8,7 @@
 * [What's in it?](#what_s_in_it)
 * [Vim](#vim)
 * [Zsh](#zsh)
+* [Git](#git)
 
 ## <a name="quick-start">Quick Start
 
@@ -20,6 +21,7 @@ $ make
 ## <a name="what_s_in_it">What's in it?
 * [Zsh](http://zsh.org)
 * [Vim](http://www.vim.org)
+* [Git](https://git-scm.com/)
 
 ## <a name="vim">Vim
 
@@ -49,4 +51,19 @@ Vim's plugin managed using [Pathogen](https://github.com/tpope/vim-pathogen)
 
 
 ## <a name="zsh">Zsh
-Coming ..
+Zsh's plugin managed using [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+### Theme
+* Nico
+* Nico-plus
+
+They are the same as [xiong-chiamiov](https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/xiong-chiamiov.zsh-theme) and [xiong-chiamiov-plus](https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/xiong-chiamiov-plus.zsh-theme) but the date and time are stuck on the right side.
+
+If you want to change it, please refer to [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh#selecting-a-theme).
+
+### Plugin
+I don't use extra plugins from oh-my-zsh. Please have a look at the long list of included plugins in [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins)
+
+
+## <a name="git">Git
+Nothing special, diff tool set to vimdiff.
