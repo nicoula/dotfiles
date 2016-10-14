@@ -1,4 +1,4 @@
-ALL= vim zsh
+ALL= git vim zsh
 
 install: $(ALL)
 
@@ -8,16 +8,12 @@ check: git-exists
 git-exists: 
 	@which git > /dev/null
 
+git: check
+	@cd git && ./install.sh
+
 vim: check
 	@cd vim && ./install.sh
 zsh: check
 	@cd zsh && ./install.sh
 
 .PHONY: $(ALL) check git-exists
-
-# test zsh exist
-# git pull .oh-my-zsh
-# intall plugin for zsh
-# git pull pathogen
-# install pathogen packet
-# ln -s .vimrc .zshrc
