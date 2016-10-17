@@ -47,6 +47,7 @@ Vim's plugin managed using [Pathogen](https://github.com/tpope/vim-pathogen)
 * `<F5>` during vertical split, reduce the size of the current split
 * `<F6>` during vertical split, increase the size of the current split
 * `<F7>` Equal split
+* `<F8>` Only keep the current split
 * `qq` mapping for changing split
 
 

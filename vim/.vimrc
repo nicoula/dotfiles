@@ -31,5 +31,6 @@ imap jj <Esc>
 nmap <F5> <C-W><<C-W><
 nmap <F6> <C-W>><C-W>>
 nmap <F7> <C-W>=
+map <F8> :only<RETURN>
 nnoremap qq <C-W><C-W>
 
