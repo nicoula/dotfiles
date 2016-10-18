@@ -31,7 +31,7 @@ find-grep () {
 
 my_configure () {
         mkdir -p ~/local/{lib,include}
-        ./configure --prefix=$HOME/local LDFLAG="-L$HOME/local/lib" CFLAGS="-I$HOME/local/include" CPPFLAGS="-I$HOME/local/include"
+        ./configure --prefix=$HOME/local LDFLAGS="-L$HOME/local/lib" CFLAGS="-I$HOME/local/include" CPPFLAGS="-I$HOME/local/include"
 }
 
 
