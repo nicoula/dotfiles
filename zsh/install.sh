@@ -35,3 +35,4 @@ do
         cp `basename $file` $file
 done
 
+ln -s $PWD/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/
