@@ -18,6 +18,7 @@ if [ -e ~/.gitconfig ]; then
                                 ;;
                         n|N ) 
                                 # Install the git configuration file
+                                rm -rf ~/.gitconfig
                                 ln -s $PWD/.gitconfig ~/.gitconfig
                                 break
                                 ;;
@@ -32,6 +33,8 @@ if [ -e ~/.gitconfig ]; then
         #fi
 
         rm -rf $file
+else
+        ln -s $PWD/.gitconfig ~/.gitconfig
 fi
 
 
