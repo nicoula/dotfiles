@@ -6,8 +6,12 @@ export C_INCLUDE_PATH=$HOME/local/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=$HOME/local/include:$CPLUS_INCLUDE_PATH
 export EDITOR=/usr/bin/vim
 
-
-alias QWE='source ~/.zshrc'
+keyboard_layout=`localectl status | sed -n 3p | cut -c 19-20` 
+if [[ "$keyboard_layout" == "fr" ]]; then
+        alias AZE='source ~/.zshrc'
+else
+        alias QWE='source ~/.zshrc'
+fi
 
 
 # Path to your oh-my-zsh installation.
